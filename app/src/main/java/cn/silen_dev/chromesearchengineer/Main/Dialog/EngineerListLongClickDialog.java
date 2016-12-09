@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import cn.silen_dev.chromesearchengineer.Chrome.Engineer.Model.ShortEngineer;
 import cn.silen_dev.chromesearchengineer.R;
@@ -49,8 +50,11 @@ public class EngineerListLongClickDialog extends DialogFragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i){
-                    case 0:new DeleteEngineerDialog(shortEngineer,handler).show(getActivity().getSupportFragmentManager(),null);break;
-                    case 1:new ShareEngineerDialog(shortEngineer,context).show(getActivity().getSupportFragmentManager(),null);break;
+                    case 0:new DeleteEngineerDialog(shortEngineer,handler).show(getActivity().getSupportFragmentManager(),null);dismiss();break;
+                    case 1:
+                        Toast.makeText(getContext(),"暂不开放",Toast.LENGTH_SHORT).show();dismiss();
+                        //new ShareEngineerDialog(shortEngineer,context).show(getActivity().getSupportFragmentManager(),null);
+                        break;
                     default:break;
                 }
             }

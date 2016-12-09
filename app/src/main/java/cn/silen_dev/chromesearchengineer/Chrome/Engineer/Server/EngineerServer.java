@@ -19,4 +19,14 @@ public class EngineerServer {
         return shortEngineerList;
     }
     public static ShortEngineer shortEngineer;
+    public static int getPopulatedIdNotUsed(){
+        int populated_id=0;
+        for (ShortEngineer engineer:shortEngineerList) {
+            if (populated_id<engineer.getPrepopulate_id()){
+                populated_id=engineer.getPrepopulate_id();
+            }
+        }
+        return populated_id+1;
+    }
+
 }

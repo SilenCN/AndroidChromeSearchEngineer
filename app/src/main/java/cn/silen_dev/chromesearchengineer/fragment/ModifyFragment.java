@@ -22,12 +22,14 @@ public class ModifyFragment extends PreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.setting_preference_dependencies);
+
         show = (SwitchPreference) findPreference("show_in_default_list");
         show.setChecked(EngineerServer.shortEngineer.isShow_in_default_list());
         show.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
                 EngineerServer.shortEngineer.setShow_in_default_list(show.isChecked());
+                setShowChangeToSetId();
                 return true;
             }
         });
@@ -94,10 +96,29 @@ public class ModifyFragment extends PreferenceFragment {
                     return false;
                 } else {
                     EngineerServer.shortEngineer.setPrepopulate_id(Integer.parseInt(o.toString()));
+                    setIdChangeToShow();
                     return true;
                 }
             }
         });
+        setShowChangeToSetId();
     }
 
+    private void setShowChangeToSetId(){
+        if (EngineerServer.shortEngineer.isShow_in_default_list()){
+            EngineerServer.shortEngineer.setPrepopulate_id(EngineerServer.getPopulatedIdNotUsed());
+        }else {
+            EngineerServer.shortEngineer.setPrepopulate_id(0);
+        }
+        prepopulate.setText(EngineerServer.shortEngineer.getPrepopulate_id()+"");
+    }
+    private void setIdChangeToShow(){
+        if (EngineerServer.shortEngineer.getPrepopulate_id()>0){
+            EngineerServer.shortEngineer.setShow_in_default_list(true);
+            show.setChecked(true);
+        }else {
+            EngineerServer.shortEngineer.setShow_in_default_list(false);
+            show.setChecked(false);
+        }
+    }
 }
