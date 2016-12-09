@@ -62,4 +62,7 @@ public class SearchEngineerDB {
         values.put("prepopulate_id",engineer.getPrepopulate_id());
         sqLiteDatabase.insert("keywords",null,values);
     }
+    public void deleteEngineer(ShortEngineer shortEngineer){
+        sqLiteDatabase.delete("keywords","id="+shortEngineer.getId(),null);
+    }
 }

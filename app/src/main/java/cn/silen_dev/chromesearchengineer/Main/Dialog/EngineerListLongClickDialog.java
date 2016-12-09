@@ -3,6 +3,7 @@ package cn.silen_dev.chromesearchengineer.Main.Dialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
@@ -15,6 +16,7 @@ import android.widget.ListView;
 
 import cn.silen_dev.chromesearchengineer.Chrome.Engineer.Model.ShortEngineer;
 import cn.silen_dev.chromesearchengineer.R;
+import cn.silen_dev.chromesearchengineer.Sqlite.SearchEngineerDB;
 
 /**
  * Created by silen on 16-11-23.
@@ -23,10 +25,12 @@ import cn.silen_dev.chromesearchengineer.R;
 public class EngineerListLongClickDialog extends DialogFragment {
     ShortEngineer shortEngineer;
     Context context;
-    public EngineerListLongClickDialog(ShortEngineer shortEngineer,Context context) {
+    Handler handler;
+    public EngineerListLongClickDialog(ShortEngineer shortEngineer,Context context,Handler handler) {
         super();
         this.shortEngineer = shortEngineer;
         this.context=context;
+        this.handler=handler;
     }
 
 
@@ -45,7 +49,7 @@ public class EngineerListLongClickDialog extends DialogFragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i){
-                    case 0:break;
+                    case 0:new DeleteEngineerDialog(shortEngineer,handler).show(getActivity().getSupportFragmentManager(),null);break;
                     case 1:new ShareEngineerDialog(shortEngineer,context).show(getActivity().getSupportFragmentManager(),null);break;
                     default:break;
                 }

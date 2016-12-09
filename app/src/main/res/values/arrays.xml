@@ -7,7 +7,7 @@
         <item>com.chrome.canary</item>
         <item>org.chromium.chrome</item>
     </string-array>
-    
+
     <string name="com.android.chrome">app_chrome</string>
     <string name="com.chrome.beta">app_chrome</string>
     <string name="com.chrome.dev">app_chrome</string>

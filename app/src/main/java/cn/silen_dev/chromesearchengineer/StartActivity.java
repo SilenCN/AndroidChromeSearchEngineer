@@ -51,6 +51,7 @@ public class StartActivity extends AppCompatActivity {
             @Override
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
+                adapter.clear();
                 new SearchEngineerDB().getAllEngineer();
                 for (ShortEngineer shortEngineer : EngineerServer.getShortEngineerList()) {
                     adapter.add(shortEngineer.getShort_name() + "(" + shortEngineer.getKeyword() + ")");
@@ -76,7 +77,7 @@ public class StartActivity extends AppCompatActivity {
         engieerListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                new EngineerListLongClickDialog(EngineerServer.getShortEngineerList().get(i),StartActivity.this).show(getSupportFragmentManager(),null);
+                new EngineerListLongClickDialog(EngineerServer.getShortEngineerList().get(i),StartActivity.this,handler).show(getSupportFragmentManager(),null);
                 return true;
             }
         });
@@ -123,18 +124,7 @@ public class StartActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         if (startOnce > 1) {
-            adapter.clear();
-            adapter.notifyDataSetChanged();
-/*
-            ShellThread shellThread = new ShellThread(ChromePackageHelper.getChrome().getPackageName());
-            shellThread.setOnTaskFinish(new ShellThread.OnTaskFinish() {
-                @Override
-                public void finish() {
 
-                }
-            });
-            shellThread.start();
-            */
             handler.sendMessage(new Message());
         }
         startOnce++;

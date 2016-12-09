@@ -36,5 +36,6 @@
     <string name="share_progress_message">Sending engineer...</string>
     <string name="share_result_error">Internet error</string>
     <string name="share_result_success">Share successfully</string>
+    <string name="delete_dialog_title">delete</string>
 
 </resources>

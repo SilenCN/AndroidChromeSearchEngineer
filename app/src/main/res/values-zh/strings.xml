@@ -29,5 +29,6 @@
     <string name="about_content">应用执行写入后，请强行停止Chrome后在进入Chrome的搜索引擎设置方可生效。\n如果本应用出现数据错误，请强行停止本应用后重新进入。</string>
     <string name="share_progress_message">发送中。。。</string>
     <string name="share_result_success">分享成功</string>
+    <string name="delete_dialog_title">删除</string>
 
 </resources>
