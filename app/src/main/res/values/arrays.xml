@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="chrome_package">
+        <item>com.android.chrome</item>
+        <item>com.chrome.beta</item>
+        <item>com.chrome.dev</item>
+        <item>com.chrome.canary</item>
+    </string-array>
+    <string-array name="EngineerListLongClickOperate">
+        <item>Delete</item>
+        <item>Share</item>
+    </string-array>
+</resources>

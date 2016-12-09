@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="share_dialog_title">分享</string>
+    <string name="app_name">Chrome搜索引擎</string>
+    <string name="chrome_package_loadtask_title">搜索中</string>
+
+    <string name="chrome_package_loadtask_message">正在搜索Chrome包名。。。</string>
+    <string name="choose_chrome_dialog_title">选择Chrome</string>
+    <string name="google_default_search_engineer_toast">谷歌默认搜索配置，不建议修改</string>
+    <string name="modify_enter_null_error">不能为空</string>
+    <string name="modify_summary_name">搜索引擎的昵称</string>
+    <string name="modify_summary_keyword">搜索引擎域名关键词</string>
+    <string name="modify_summary_url">搜索引擎网址(搜索内容用{searchTerms}代替，比如https://www.google.com/#q={searchTerms})</string>
+    <string name="modify_summary_input_encodings">搜索内容编码(一般为UTF-8,可不填)</string>
+    <string name="modify_summary_show_in_default_list">是否在Chrome搜索列表中显示</string>
+    <string name="modify_summary_prepopulate_id">排列顺序，整数，必须唯一，不能与其他搜索引擎重复。0表示不显示</string>
+    <string name="modify_activity_title_create">新建</string>
+    <string name="modify_activity_check_dialog_title">确认</string>
+    <string name="modify_activity_check_dialog_message">是否保存并写入您做的更改？</string>
+    <string name="modify_activity_check_dialog_ok">写入</string>
+    <string name="modify_activity_check_dialog_no">不写入</string>
+
+    <string name="donate_alipay_openAlipay">打开支付宝</string>
+    <string name="donate_alipay_text">捐赠</string>
+    <string name="donate_alipay_count">13132006570</string>
+    <string name="donate_alipay_dialogTV">我们的支付宝账号(13132006570)已复制至手机粘贴板，感谢您的支持。</string>
+    <string name="about">帮助</string>
+    <string name="ok">好的</string>
+    <string name="about_content">应用执行写入后，请强行停止Chrome后在进入Chrome的搜索引擎设置方可生效。\n如果本应用出现数据错误，请强行停止本应用后重新进入。</string>
+    <string name="share_progress_message">发送中。。。</string>
+    <string name="share_result_success">分享成功</string>
+
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:key="name"
+        android:summary="@string/modify_summary_name"
+        android:title="name" />
+    <EditTextPreference
+        android:key="keyword"
+        android:summary="@string/modify_summary_keyword"
+        android:title="keyword" />
+    <EditTextPreference
+        android:key="url"
+        android:summary="@string/modify_summary_url"
+        android:title="url" />
+    <EditTextPreference
+        android:key="input_encodings"
+        android:summary="@string/modify_summary_input_encodings"
+        android:title="input_encodings" />
+    <SwitchPreference
+        android:key="show_in_default_list"
+        android:summary="@string/modify_summary_show_in_default_list"
+        android:defaultValue="true"
+        android:title="show_in_default_list" />
+    <EditTextPreference
+        android:key="prepopulate_id"
+        android:summary="@string/modify_summary_prepopulate_id"
+        android:title="prepopulate_id" />
+
+</PreferenceScreen>
