@@ -5,7 +5,15 @@
         <item>com.chrome.beta</item>
         <item>com.chrome.dev</item>
         <item>com.chrome.canary</item>
+        <item>org.chromium.chrome</item>
     </string-array>
+    
+    <string name="com.android.chrome">app_chrome</string>
+    <string name="com.chrome.beta">app_chrome</string>
+    <string name="com.chrome.dev">app_chrome</string>
+    <string name="com.chrome.canary">app_chrome</string>
+    <string name="org.chromium.chrome">app_chrome</string>
+
     <string-array name="EngineerListLongClickOperate">
         <item>Delete</item>
         <item>Share</item>
