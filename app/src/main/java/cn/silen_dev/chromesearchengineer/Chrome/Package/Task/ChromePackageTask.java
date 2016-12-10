@@ -54,7 +54,6 @@ public class ChromePackageTask extends AsyncTask<String, Integer, String> {
         String[] chromeArray = context.getResources().getStringArray(R.array.chrome_package);
         int i = 0;
         for (PackageInfo info : list) {
-            if (info.applicationInfo.packageName.toLowerCase().contains("chrome")) {
                 for (String chromePackage : chromeArray) {
                     if (info.applicationInfo.packageName.toLowerCase().equals(chromePackage.toLowerCase())) {
                         Chrome chrome = new Chrome();
@@ -64,7 +63,6 @@ public class ChromePackageTask extends AsyncTask<String, Integer, String> {
                         ChromePackageHelper.addChromePackage(chrome);
                     }
                 }
-            }
             publishProgress(++i);
         }
         return null;

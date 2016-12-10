@@ -6,6 +6,7 @@
         <item>com.chrome.dev</item>
         <item>com.chrome.canary</item>
         <item>org.chromium.chrome</item>
+        <item>com.mokee.yubrowser</item>
     </string-array>
 
     <string name="com.android.chrome">app_chrome</string>
@@ -13,7 +14,7 @@
     <string name="com.chrome.dev">app_chrome</string>
     <string name="com.chrome.canary">app_chrome</string>
     <string name="org.chromium.chrome">app_chrome</string>
-
+    <string name="com.mokee.yubrowser">app_chrome</string>
     <string-array name="EngineerListLongClickOperate">
         <item>Delete</item>
         <item>Share</item>

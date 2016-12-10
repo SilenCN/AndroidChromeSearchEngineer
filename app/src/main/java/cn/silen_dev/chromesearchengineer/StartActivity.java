@@ -65,9 +65,9 @@ public class StartActivity extends AppCompatActivity {
         engieerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                if (i == 0) {
+                /*if (i == 0) {
                     Toast.makeText(StartActivity.this, getResources().getString(R.string.google_default_search_engineer_toast), Toast.LENGTH_LONG).show();
-                } else {
+                } else */{
                     EngineerServer.shortEngineer = EngineerServer.getShortEngineerList().get(i);
                     EngineerServer.create = false;
                     startActivity(new Intent(StartActivity.this, ModifyActivity.class));
